@@ -12,9 +12,9 @@ betInput?.addEventListener("input", () => {
 if (betInput)
   startButton?.addEventListener("click", () => {
     if (!startButton.classList.contains("disabled")) {
-      game.start(+betInput.value);
       startButton.classList.add("disabled");
       betInput.readOnly = true;
+      game.start(+betInput.value);
     }
   });
 const hitButton = document.getElementById("hitButton");
