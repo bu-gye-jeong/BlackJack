@@ -47,7 +47,7 @@ export class Game {
     this.gameData.player.draw();
     this.gameData.player.draw();
     if (this.gameData.player.blackJack) {
-      if (this.gameData.dealer.blackJack) this.end("draw");
+      if (this.gameData.dealer.blackJack) this.dealerTurn();
       else this.end("player", 1.5);
     }
   }
