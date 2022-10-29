@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블랙잭아시는구나</title>
+    <script type="module" crossorigin src="/assets/index.30febdbb.js"></script>
+    <link rel="stylesheet" href="/assets/index.ddcf858c.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="gameMenu">
+        <div id="credit">Credit 100</div>
+        <div id="bet">
+          <label for="betAmount">Bet</label>
+          <input id="betAmount" type="number"></input>
+        </div>
+        <div id="startButton" class="button disabled"><div class="buttonText">Start</div></div>
+      </div>
+      <div id="dealerCards" class="deck"></div>
+      <div id="playerCards" class="deck"></div>
+      <div id="menu">
+        <div id="hitButton" class="button"><div class="buttonText">Hit</div></div>
+        <div id="stayButton" class="button"><div class="buttonText">Stay</div></div>
+        <div id="doubleDownButton" class="button"><div class="buttonText">Double Down</div></div>
+      </div>
+      <div id="burstMessage" class="hidden">Burst!</div>
+      <div id="message" class="hidden"></div>
+    </div>
+    
+  </body>
+</html>
