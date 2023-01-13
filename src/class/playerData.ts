@@ -43,7 +43,7 @@ export class PlayerData {
     return this.maxScore === 21;
   }
 
-  get burst() {
+  get bust() {
     return this.score > 21;
   }
 

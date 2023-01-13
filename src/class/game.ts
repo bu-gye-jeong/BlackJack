@@ -40,7 +40,7 @@ export class Game {
       player: new PlayerData("playerCards"),
     };
 
-    document.getElementById("burstMessage")?.classList.add("hidden");
+    document.getElementById("bustMessage")?.classList.add("hidden");
     document.getElementById("message")?.classList.add("hidden");
     this.gameData.dealer.draw("back");
     this.gameData.dealer.draw();
@@ -55,14 +55,14 @@ export class Game {
   hit() {
     if (this.gameState !== "playing" || !this.gameData) return;
     this.gameData.player.draw();
-    if (this.gameData.player.burst) this.burst();
+    if (this.gameData.player.bust) this.bust();
   }
 
-  burst() {
+  bust() {
     if (this.gameState !== "playing" || !this.gameData) return;
     this.gameState = "ended";
     setTimeout(() => {
-      this.burstMessage("You Bursted!");
+      this.bustMessage("You busted!");
       this.end("dealer");
     }, 500);
   }
@@ -93,8 +93,8 @@ export class Game {
 
   openDealer() {
     if (this.gameState !== "ended" || !this.gameData) return;
-    if (this.gameData.dealer.burst) {
-      this.burstMessage("Dealer Bursted!");
+    if (this.gameData.dealer.bust) {
+      this.bustMessage("Dealer busted!");
       this.end("player");
     } else if (this.gameData.dealer.maxScore <= 16) {
       this.gameData.dealer.draw();
@@ -122,17 +122,17 @@ export class Game {
     }
   }
 
-  message(msg: string, color: "burst" | "win" | "lose" | "normal") {
+  message(msg: string, color: "bust" | "win" | "lose" | "normal") {
     const messageDiv = document.getElementById("message");
     if (!messageDiv) return;
     messageDiv.innerText = msg;
-    messageDiv.classList.remove("hidden", "burst", "win", "lose", "normal");
+    messageDiv.classList.remove("hidden", "bust", "win", "lose", "normal");
     messageDiv.classList.add(color);
   }
 
-  burstMessage(msg: string) {
-    const burstMessage = document.getElementById("burstMessage");
-    if (burstMessage) burstMessage.innerText = msg;
-    burstMessage?.classList.remove("hidden");
+  bustMessage(msg: string) {
+    const bustMessage = document.getElementById("bustMessage");
+    if (bustMessage) bustMessage.innerText = msg;
+    bustMessage?.classList.remove("hidden");
   }
 }

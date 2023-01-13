@@ -16,7 +16,7 @@
   --colButtonBorder2: #204c8f;
   --colButtonText: white;
   --colButtonDisabledText: #61728f;
-  --colBurst: #b42a2a;
+  --colBust: #b42a2a;
   --colMessageNormal: #3f66d1;
   --colMessageWin: #1f6929;
   --colMessageLose: #b42a2a;
@@ -174,17 +174,17 @@ input {
   flex-shrink: 1;
 }
 
-#burstMessage {
+#bustMessage {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--colBurst);
+  color: var(--colBust);
   font-size: 2em;
   opacity: 100%;
 }
 
-#burstMessage.hidden {
+#bustMessage.hidden {
   opacity: 0;
 }
 
@@ -197,8 +197,8 @@ input {
   opacity: 100%;
   white-space: nowrap;
 }
-#message.burst {
-  color: var(--colBurst);
+#message.bust {
+  color: var(--colBust);
 }
 #message.normal {
   color: var(--colMessageNormal);
