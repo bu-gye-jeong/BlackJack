@@ -40,7 +40,7 @@ export class PlayerData {
   }
 
   get blackJack() {
-    return this.maxScore === 21;
+    return this.cards.length === 2 ? this.maxScore === 21 : false;
   }
 
   get bust() {
